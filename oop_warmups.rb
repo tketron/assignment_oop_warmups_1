@@ -15,3 +15,10 @@ def fibs(elements)
   end
   return sequence
 end
+
+def my_benchmark(number_of_times)
+  start_time = Time.now
+  #run block specified number of times
+  number_of_times.times {yield}
+  return Time.now - start_time
+end
